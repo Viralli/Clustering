@@ -34,6 +34,24 @@
 
        K-Means is a clustering algorithm that partitions the dataset into a predefined number of clusters (k). It aims to minimize the variance within each cluster. The algorithm works by iteratively updating the cluster centroids until convergence.
 
+  # Outputs
+
+  1. DBSCAN clustering for first set of points(Part -1):
+
+        ![dbscan_eps_min_sample_data_1 py - Part 1](https://github.com/Viralli/Clustering/assets/92823324/4b378bcf-eb5b-4369-a710-3b513e226578)
+
+  2. DBSCAN clustering for first set of points(Part -2):
+
+        ![dbscan_eps_min_sample_data_1 py - Part 2](https://github.com/Viralli/Clustering/assets/92823324/08a54178-3c6a-4013-8a5c-dc7d1f721d1a)
+
+  3. DBSCAN clustering for Second set of points(Part -1):
+
+        ![dbscan_eps_min_sample_data_2 py - Part 1](https://github.com/Viralli/Clustering/assets/92823324/84140b5c-e120-4909-b3d6-710a9884ff58)
+
+  4. DBSCAN clustering for Second set of points(Part -2):
+
+        ![dbscan_eps_min_sample_data_2 py - Part 2](https://github.com/Viralli/Clustering/assets/92823324/00681472-8545-4df3-a95e-62eff0be282a)
+
   # Conclusion
 
   This project provides an overview of different clustering techniques and demonstrates their implementation using Python. By visualizing clusters and their boundaries, it becomes easier to understand the structure and patterns within the data.   
