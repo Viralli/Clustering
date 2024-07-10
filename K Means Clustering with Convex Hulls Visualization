@@ -1,0 +1,53 @@
+K Means Clustering
+
+Definition
+
+K Means Clustering is a widely used unsupervised machine learning algorithm that divides a dataset into K distinct, non-overlapping clusters. It iteratively assigns each data point to one of the K clusters based on 
+feature similarity.
+
+K Means Clustering with Convex Hulls Visualization
+
+Overview
+
+This project illustrates the application of the K Means algorithm to group a sample dataset and visualize the clusters with convex hulls. The convex hulls outline each cluster's boundaries, giving a clear geometric view of 
+the data points and making the clustering results easier to understand.
+
+Convex Hulls
+
+Convex hulls are geometric shapes that outline the outer boundaries of each cluster. They provide a clear representation of how data points are grouped together in space.
+
+Implementation Details
+
+Dataset Generation: We generate a synthetic dataset using `make_blobs` with 300 data points, 4 centers, and a standard deviation of 0.60.
+
+K Means Clustering: The algorithm is initialized with K=4 clusters using the `KMeans` class from `sklearn.cluster`.
+
+Visualization:
+
+Part 1: Displays a scatter plot of the clustered data points, where each cluster is assigned a distinct color.
+
+Part 2: Visualizes the convex hulls of the clusters using plot_convex_hulls. Each convex hull outlines the boundary of its corresponding cluster, offering a visual understanding of cluster shapes and distributions.
+
+Benefits of Convex Hulls Visualization
+
+Geometric Insight: Convex hulls provide geometric insights into the structure of clusters, helping in understanding the spatial arrangement and boundaries of data groups.
+
+Enhanced Interpretation: By adding convex hulls to the scatter plot, we improve the clarity of the clustering results, making it easier to see how data points are grouped into clusters.
+
+Convergence of K Means Clustering
+
+The K Means algorithm converges when the centroids of the clusters no longer change significantly between iterations or when a specified number of iterations is reached. Convergence is achieved when the assignments of 
+data points to clusters stabilize and centroids settle into their final positions.
+
+Time Complexity in K Means Clustering
+
+The time complexity of the K Means algorithm is O(n * K * I * d), where:
+
+n is the number of data points,
+K is the number of clusters,
+I is the number of iterations until convergence,
+d is the number of features in each data point.
+
+
+
+
