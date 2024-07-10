@@ -52,6 +52,22 @@
 
         ![dbscan_eps_min_sample_data_2 py - Part 2](https://github.com/Viralli/Clustering/assets/92823324/00681472-8545-4df3-a95e-62eff0be282a)
 
+  5. K Means Clustering(Part -1):
+
+        ![K Means Clustering - Output Part 1](https://github.com/Viralli/Clustering/assets/92823324/22b61e69-419b-4cb8-9703-fde0c366d279)
+
+  6. K Means Clustering(Part -2):
+    
+        ![K Means Clustering - Output Part 2](https://github.com/Viralli/Clustering/assets/92823324/2086356e-1b57-4d5c-b084-54a1eabed024)
+
+  7. K Means Clustering (Convex hull of Clusters) Part - 1:
+
+        ![K Means Clustering (Convex Hulls of Clusters) - Output Part 1](https://github.com/Viralli/Clustering/assets/92823324/cfafa7f3-5769-4621-ae35-6bdbb426c01b)
+
+  8.  K Means Clustering (Convex hull of Clusters) Part - 2:
+
+         ![K Means Clustering (Convex Hulls of Clusters) - Output Part 2](https://github.com/Viralli/Clustering/assets/92823324/ec3eb828-8771-402e-8bda-2b7a368e10f2)
+
   # Conclusion
 
   This project provides an overview of different clustering techniques and demonstrates their implementation using Python. By visualizing clusters and their boundaries, it becomes easier to understand the structure and patterns within the data.   
