@@ -68,6 +68,14 @@
 
          ![K Means Clustering (Convex Hulls of Clusters) - Output Part 2](https://github.com/Viralli/Clustering/assets/92823324/ec3eb828-8771-402e-8bda-2b7a368e10f2)
 
+  9. K Means Clustering with Polygon Area Calculation - Part 1:
+
+      ![K Means Clustering with Polygon Area Calculation - Part 1](https://github.com/user-attachments/assets/c36e3b78-1925-4349-aab5-e2cc38d08f33)
+
+ 10. K Means Clustering with Polygon Area Calculation - Part 2:
+
+      ![K Means Clustering with Polygon Area Calculation - Part 2](https://github.com/user-attachments/assets/7fac630b-7485-4ff7-a198-beb20a56cfd8)
+
   # Conclusion
 
   This project provides an overview of different clustering techniques and demonstrates their implementation using Python. By visualizing clusters and their boundaries, it becomes easier to understand the structure and patterns within the data.   
