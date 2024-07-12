@@ -1,0 +1,124 @@
+K-means Clustering Algorithm:
+
+`kmeans` Function:
+
+    Initialization: The function starts by randomly selecting initial centroids from the given points. This is done using NumPy's `random.choice` method to ensure the initial centroids are unique and within the data points.
+
+    Iteration: The algorithm then iterates up to a maximum number of iterations (`max_iterations`). In each iteration:
+
+            Distance Calculation: The function calculates the Euclidean distance from each point to each centroid. 
+
+            Assignment: Each point is assigned to the nearest centroid based on the calculated distances. The nearest centroid for each point is determined using `argmin`.
+
+            Centroid Update: New centroids are computed as the mean of all points assigned to each centroid.
+
+            Convergence Check: The algorithm checks if the centroids have changed. If they have not changed, the algorithm converges and stops early.
+    
+    Output: The function returns the final centroids and the cluster assignments for each point.
+
+Polygon Area Calculation Functions:
+
+    `calculate_apothem` Function:
+
+           This function calculates the apothem (the perpendicular distance from the center to a side) of a regular polygon using the side length and the number of sides. The apothem formula involves the tangent of π 
+           divided by the number of sides.
+
+    `calculate_polygon_area` Function:
+
+           This function computes the area of a regular polygon using the perimeter and the apothem. The perimeter is calculated as the product of the side length and the number of sides, and the area is then half the 
+          product of the perimeter and the apothem.
+
+   `calculate_polygon_area_direct` Function:
+
+           This function provides a direct formula to calculate the area of a regular polygon using the side length and the number of sides. The formula involves the tangent of π divided by the number of sides.
+
+Example Usage:
+
+K-means Clustering:
+
+1. Define Example Dataset:
+
+        We start with a small dataset consisting of six points in a 2D space.
+
+        These points are represented as an array:
+
+          points = np.array([ [1, 2], [1.5, 1.8], [5, 8], [8, 8], [1, 0.6], [9, 11]])
+
+2. Call the K-means Function:
+
+        We call the kmeans function with the defined points and specify k=2 to cluster the points into two groups.
+
+       `max_iterations` is set to the default value of 100
+
+       k = 2
+centroids, clusters = kmeans(points, k)
+
+3. Print Final Centroids and Cluster Assignments:
+
+        After running the K-means algorithm, we print the coordinates of the final centroids.
+
+        We also print the cluster assignment for each point, indicating which centroid each point is closest to.
+
+print("Centroids:", centroids)
+print("Cluster assignments:", clusters)
+
+Output:
+
+The centroids are the average locations of the points in each cluster.
+
+Cluster assignments show which points belong to which centroid
+
+Example Output:
+
+Centroids: [[2.16666667 1.46666667]
+           [7.33333333 9.        ]]
+Cluster assignments: [0 0 1 1 0 1]
+
+Polygon Area Calculation:
+
+1. Define Side Length and Number of Sides:
+
+        We define the side length and number of sides for a regular polygon. In this case, we use a hexagon with a side length of 5 units.
+
+        side_length = 5
+        num_sides = 6  # Hexagon
+
+2. Calculate Apothem:
+
+        We calculate the apothem (distance from the center to the middle of a side) of the hexagon using the `calculate_apothem` function.
+
+        apothem = calculate_apothem(side_length, num_sides)
+
+        The apothem is an important part of calculating the area of a polygon.
+
+3. Calculate Area Using Perimeter and Apothem:
+
+        We calculate the area of the hexagon using the calculate_polygon_area function, which uses both the perimeter and the apothem.
+
+        area = calculate_polygon_area(side_length, num_sides)
+
+4. Calculate Area Directly:
+
+       We also calculate the area directly using the side length and number of sides with the `calculate_polygon_area_direct` function.
+
+       direct_area = calculate_polygon_area_direct(side_length, num_sides)
+
+5. Print the Apothem and Areas:
+
+        Finally, we print the calculated apothem and the areas obtained using both methods.
+
+       print(f"Apothem of the polygon: {apothem}")
+       print(f"Area of the polygon (using perimeter and apothem): {area}")
+       print(f"Area of the polygon (using direct formula): {direct_area}")
+
+Output:
+
+The apothem gives the height of the central triangle in the polygon.
+
+Both methods should yield the same area for the polygon.
+
+Example Output:
+
+Apothem of the polygon: 4.330127018922193
+Area of the polygon (using perimeter and apothem): 64.9519052838329
+Area of the polygon (using direct formula): 64.9519052838329
