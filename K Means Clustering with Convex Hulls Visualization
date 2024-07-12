@@ -48,6 +48,38 @@ K is the number of clusters,
 I is the number of iterations until convergence,
 d is the number of features in each data point.
 
+K Means Clustering Algorithm Example:
+
+Initial Setup:
+
+we are assuming the dataset,
+
+Dataset:
+                Points=[(1,2),(1.5,1.8),(5,8),(8,8),(1,0.6),(9,11)]
+
+We are assuming the number of clusters, 
+
+Number of clusters (K): 2
+
+The initial centroids in the K-means algorithm are chosen randomly from the data points:
+
+Initial centroids:
+
+Centroid C1 = (1,2)
+Centroid C2 = (5,8)
+
+Step-by-Step Process:
+
+1. Assign Data Points to Nearest Centroid 
+
+Point (1, 2):
+
+Distance to C1: 
+
+
+
+
+
 
 
 
