@@ -1,0 +1,90 @@
+Output Explanation
+
+K-means Clustering:
+
+Centroids:
+
+[[7.33333333 9.        ]
+ [1.16666667 1.46666667]]
+
+The K-means clustering algorithm has identified two centroids:
+
+        The first centroid is at coordinates (7.333, 9.0)
+        The second centroid is at coordinates (1.167, 1.467).
+
+Cluster assignments:
+
+[1 1 0 0 1 0]
+
+The points are assigned to clusters as follows:
+
+        Points [1, 2], [1.5, 1.8], and [1, 0.6] belong to the second cluster (centroid at (1.167, 1.467)).
+        Points [5, 8], [8, 8], and [9, 11] belong to the first cluster (centroid at (7.333, 9.0)).
+
+Polygon Area Calculation:
+Apothem of the polygon:
+
+Apothem:
+
+The apothem of a regular polygon is the distance from the center of the polygon to the midpoint of one of its sides. It can be calculated using the following formula:
+
+                                                         Apothem= side_length/2⋅tan(π/num_sides)
+
+Where:
+side_length is the length of one side of the polygon.
+num_sides is the number of sides of the polygon.
+π is the mathematical constant Pi (≈3.14159)
+
+Apothem of the polygon:
+
+    4.330127018922194
+
+    The apothem (distance from the center to the midpoint of a side) of a regular hexagon with side length 5 is 4.330.
+
+Area of the Polygon (using perimeter and apothem):
+
+The area of a regular polygon can be calculated using its perimeter and apothem with the following formula:
+
+                                                       Area= 1/2⋅Perimeter⋅Apothem
+
+Where:
+
+Perimeter=num_sides⋅side_length
+Apothem is calculated as shown above.
+
+Area of the polygon (using perimeter and apothem):
+
+    64.9519052838329
+
+    The area of the hexagon, calculated using its perimeter and apothem, is approximately 64.952.
+
+Area of the Polygon (using direct formula):
+
+    The area of a regular polygon can also be calculated directly using the side length and the number of sides with the following formula:
+
+                                                   Area= num_sides.side_length^2/4⋅tan(π/num_sides)
+
+Where:
+num_sides is the number of sides of the polygon.
+side_length is the length of one side of the polygon.
+π is the mathematical constant Pi (≈3.14159)
+
+Area of the polygon (using direct formula):
+
+    64.9519052838329
+
+    The area of the hexagon, calculated using the direct formula involving the side length and number of sides, is also approximately 64.952.   
+
+Summary:
+    The K-means clustering algorithm successfully clustered the example points into two groups with centroids at (7.333, 9.0) and (1.167, 1.467).
+
+    The polygon area calculation functions correctly computed the apothem and area of a regular hexagon with a side length of 5.
+
+This following output demonstrates the combined application of K-means clustering and polygon area calculations:
+
+        Centroids: [[7.33333333 9.        ]
+ [1.16666667 1.46666667]]
+Cluster assignments: [1 1 0 0 1 0]
+Apothem of the polygon: 4.330127018922194
+Area of the polygon (using perimeter and apothem): 64.9519052838329
+Area of the polygon (using direct formula): 64.9519052838329
