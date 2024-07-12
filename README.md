@@ -74,7 +74,7 @@
 
  10. K Means Clustering with Polygon Area Calculation - Part 2:
 
-      ![K Means Clustering with Polygon Area Calculation - Part 2](https://github.com/user-attachments/assets/7fac630b-7485-4ff7-a198-beb20a56cfd8)
+      ![K Means Clustering with Polygon Area Calculation - Part 2](https://github.com/user-attachments/assets/d251a3c8-4e54-4652-9de7-9f53bd608f4b)
 
   # Conclusion
 
