@@ -1,0 +1,119 @@
+Output:
+
+Initial Centroids:
+Centroid 1: (1, 2)
+Centroid 2: (5, 8)
+
+Iteration 1:
+Cluster 1: [(1, 2), (1.5, 1.8), (1, 0.6)]
+Cluster 2: [(5, 8), (8, 8), (9, 11)]
+Updated Centroid 1: (1.1666666666666667, 1.4666666666666666)
+Updated Centroid 2: (7.333333333333333, 9.0)
+--------------------------------------------------
+Iteration 2:
+Cluster 1: [(1, 2), (1.5, 1.8), (1, 0.6)]
+Cluster 2: [(5, 8), (8, 8), (9, 11)]
+Updated Centroid 1: (1.1666666666666667, 1.4666666666666666)
+Updated Centroid 2: (7.333333333333333, 9.0)
+--------------------------------------------------
+Iteration 3:
+Cluster 1: [(1, 2), (1.5, 1.8), (1, 0.6)]
+Cluster 2: [(5, 8), (8, 8), (9, 11)]
+Updated Centroid 1: (1.1666666666666667, 1.4666666666666666)
+Updated Centroid 2: (7.333333333333333, 9.0)
+--------------------------------------------------
+Final Clusters:
+Cluster 1: [(1, 2), (1.5, 1.8), (1, 0.6)]
+Cluster 2: [(5, 8), (8, 8), (9, 11)]
+Final Centroids:
+Centroid 1: (1.1666666666666667, 1.4666666666666666)
+Centroid 2: (7.333333333333333, 9.0)
+
+=== Code Execution Successful ===
+
+=== Code Execution Successful ===
+
+Output Explanation:
+
+Initial Centroids
+
+    Centroid 1: (1, 2)
+    Centroid 2: (5, 8)
+
+Iteration 1
+
+    Cluster 1: [(1, 2), (1.5, 1.8), (1, 0.6)]
+
+    Points (1, 2), (1.5, 1.8), and (1, 0.6) are closer to Centroid 1.
+
+    Cluster 2: [(5, 8), (8, 8), (9, 11)]
+
+    Points (5, 8), (8, 8), and (9, 11) are closer to Centroid 2.
+
+    Updated Centroid 1: (1.167, 1.467)
+
+        New centroid is the average of Cluster 1 points: ((1 + 1.5 + 1) / 3, (2 + 1.8 + 0.6) / 3).
+
+     Updated Centroid 2: (7.333, 9.0)
+
+        New centroid is the average of Cluster 2 points: ((5 + 8 + 9) / 3, (8 + 8 + 11) / 3).
+
+Iteration 2
+
+    Cluster 1: [(1, 2), (1.5, 1.8), (1, 0.6)]
+
+        Points remain closer to the updated Centroid 1.
+
+    Cluster 2: [(5, 8), (8, 8), (9, 11)]
+
+        Points remain closer to the updated Centroid 2.
+
+    Updated Centroid 1: (1.167, 1.467)
+
+        The centroid for Cluster 1 remains unchanged
+
+    Updated Centroid 2: (7.333, 9.0)
+
+        The centroid for Cluster 2 remains unchanged.
+
+Iteration 3
+
+    Cluster 1: [(1, 2), (1.5, 1.8), (1, 0.6)]
+
+       Points still closest to Centroid 1.
+
+    Cluster 2: [(5, 8), (8, 8), (9, 11)]
+
+       Points still closest to Centroid 2.
+
+    Updated Centroid 1: (1.167, 1.467)
+
+       The centroid for Cluster 1 remains unchanged.
+
+    Updated Centroid 2: (7.333, 9.0)
+
+       The centroid for Cluster 2 remains unchanged
+
+Final Clusters and Centroids
+
+Cluster 1: [(1, 2), (1.5, 1.8), (1, 0.6)]
+
+    Final grouping of points that are closest to Centroid 1.
+
+Cluster 2: [(5, 8), (8, 8), (9, 11)
+
+    Final grouping of points that are closest to Centroid 2.
+
+Final Centroid 1: (1.167, 1.467)
+
+    Final calculated centroid for Cluster 1.
+
+Final Centroid 2: (7.333, 9.0)
+
+    Final calculated centroid for Cluster 2.
+
+Conclusion
+
+The K-Means algorithm was run for three iterations, during which the centroids were recalculated after assigning points to clusters based on their Euclidean distance to the centroids.
+The algorithm quickly stabilized, with centroids and clusters remaining the same from iteration 2 onwards. This indicates that the centroids had converged and the clusters were 
+well-defined, effectively partitioning the data into two distinct groups. The final centroids accurately represent the central points of their respective clusters.
