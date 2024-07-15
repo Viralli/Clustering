@@ -1,0 +1,75 @@
+DBSCAN Clustering Algorithm Example:
+
+Initial Setup:
+
+Assume the dataset:
+
+Points = [(1, 2), (1.5, 1.8), (5, 8), (8, 8), (1, 0.6), (9, 11)]
+
+Setting parameters for the DBSCAN algorithm:
+
+Epsilon (ε): 2.0 (maximum distance between two points to be considered neighbors)
+
+Minimum Points (MinPts): 2 (minimum number of points to form a dense region)
+
+Step-by-Step Process:
+
+`MinPts` - (Minimum Points)
+
+1. Choosing Core Points:
+
+    Core Point Definition: A point is considered a core point if it has at least `MinPts` points within its ε-neighborhood.
+
+Procedure:
+
+    Start with a random point and check its neighborhood.
+
+    Example: Start with point `(1, 2)`.
+
+    Calculate distances to all other points and check if the number of points within ε distance is at least `MinPts`.
+
+2. Finding Eps-Neighborhood:
+
+    Epsilon-Neighborhood Definition: The set of all points that are within distance ε from a given point.
+
+Procedure:
+
+    For point `(1, 2)`, calculate the distances to all other points.
+
+    Select points within ε distance.
+
+3. Core Point Check:
+
+    Core Point Determination: A point is a core point if it has at least `MinPts` points (including itself) within its ε-neighborhood.
+
+Procedure:
+
+    For point `(1, 2)`, count the number of points in its neighborhood.
+
+    If the count is at least `MinPts`, classify the point as a core point.
+
+4. Expand the Cluster:
+
+    After identifying a core point, include all points that are reachable within the ε distance to form the cluster.
+
+Procedure:
+
+    Start with the core point and include all nearby points within the ε distance.
+
+5. Assign Border Points:
+
+     Border Point Assignment: Points within the ε distance of a core point but without enough neighbors to be core points themselves are added to the nearest core point's cluster.
+
+Procedure:
+
+    1. Find points within the ε distance that are not core points.
+
+    2. Add these points to the nearest core point's cluster.
+
+6. Handling Noise:
+
+        Noise Handling: Points that do not belong to any cluster (not core points and not border points) are considered noise.
+
+    Procedure:
+
+        Find points that are not core points or border points and classify them as noise.
