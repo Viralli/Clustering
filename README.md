@@ -60,19 +60,23 @@
     
         ![K Means Clustering - Output Part 2](https://github.com/Viralli/Clustering/assets/92823324/2086356e-1b57-4d5c-b084-54a1eabed024)
 
-  7. K Means Clustering (Convex hull of Clusters) Part - 1:
+  7. K Means Clustering Algorithm Part -1
 
-        ![K Means Clustering (Convex Hulls of Clusters) - Output Part 1](https://github.com/Viralli/Clustering/assets/92823324/cfafa7f3-5769-4621-ae35-6bdbb426c01b)
+        ![K Means Clustering Algorithm - Part 1](https://github.com/user-attachments/assets/e762ab67-a7f3-479f-9324-3ca09d50b955)
+        
+  8.  K Means Clustering Algorithm Part -2
 
-  8.  K Means Clustering (Convex hull of Clusters) Part - 2:
+        ![K Means Clustering Algorithm - Part 2](https://github.com/user-attachments/assets/29285321-31ab-4059-b4f1-33eccd9ae94d)
 
-         ![K Means Clustering (Convex Hulls of Clusters) - Output Part 2](https://github.com/Viralli/Clustering/assets/92823324/ec3eb828-8771-402e-8bda-2b7a368e10f2)
+  9.   K Means Clustering Algorithm Part -3
 
-  9. K Means Clustering with Polygon Area Calculation - Part 1:
+        ![K Means Clustering Algorithm - Part 3](https://github.com/user-attachments/assets/c987e3b9-c032-400c-8a3d-04c0a21a0cf7)
+
+  10. K Means Clustering with Polygon Area Calculation - Part 1:
 
       ![K Means Clustering with Polygon Area Calculation - Part 1](https://github.com/user-attachments/assets/c36e3b78-1925-4349-aab5-e2cc38d08f33)
 
- 10. K Means Clustering with Polygon Area Calculation - Part 2:
+ 11. K Means Clustering with Polygon Area Calculation - Part 2:
 
       ![K Means Clustering with Polygon Area Calculation - Part 2](https://github.com/user-attachments/assets/d251a3c8-4e54-4652-9de7-9f53bd608f4b)
 
