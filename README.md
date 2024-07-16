@@ -38,7 +38,7 @@
 
   1. DBSCAN Clustering Algorithm Part -1:
 
-        ![DBSCAN Clustering Algorithm Part -1](https://github.com/user-attachments/assets/5010bb4b-9df0-4cea-9d17-8e1dedf49c93)
+       ![1](https://github.com/user-attachments/assets/673760dc-ea37-4875-9d94-b71c6e09c8b8)
     
   2. DBSCAN Clustering Algorithm Part -2:
 
