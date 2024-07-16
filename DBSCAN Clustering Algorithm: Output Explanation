@@ -1,0 +1,56 @@
+Output Explanation: DBSCAN Clustering
+
+     The output from the DBSCAN (Density-Based Spatial Clustering of Applications with Noise) algorithm demonstrates the clustering results for a given set of points. DBSCAN is an unsupervised clustering algorithm that 
+     groups together points that are closely packed together, marking as outliers the points that lie alone in low-density regions.
+
+Parameters Used
+
+        Epsilon (eps): 2.0
+        Minimum Samples (min_samples): 2
+
+Dataset
+
+       The dataset consists of the following points:
+
+       (1, 2)
+       (1.5, 1.8)
+       (5, 8)
+       (8, 8)
+       (1, 0.6)
+       (9, 11)
+
+Clustering Results
+
+       The DBSCAN algorithm produced the following cluster labels for each point:
+
+             Point [1, 2] is in cluster 0
+
+             Point [1.5, 1.8] is in cluster 0
+
+             Point [5, 8] is in cluster -1 (Noise)
+
+             Point [8, 8] is in cluster -1 (Noise)
+
+             Point [1, 0.6] is in cluster 0
+
+             Point [9, 11] is in cluster -1 (Noise)
+
+Interpretation
+
+        1. Cluster 0: The points `[1, 2]`, `[1.5, 1.8]`, and `[1, 0.6]` are grouped into a single cluster (cluster 0). These points are close enough to each other, satisfying the `eps` and `min_samples` criteria for DBSCAN.
+
+        2. Noise Points: The points `[5, 8]`, `[8, 8]`, and `[9, 11]` are labeled as `-1`, indicating that they are considered noise by the DBSCAN algorithm. These points do not have enough neighboring points within the 
+        `eps` distance to form a dense region.
+
+Visualization
+
+        The following plot visualizes the clustering results:
+
+            Cluster 0: Points are displayed with a distinct color (other than black).
+
+            Noise Points: Displayed in black to indicate they are outliers.
+
+Conclusion
+
+    The DBSCAN algorithm successfully identified one cluster (cluster 0) containing three points. The remaining points were identified as noise, indicating they do not belong to any cluster due to their isolation in 
+    low-density regions.
