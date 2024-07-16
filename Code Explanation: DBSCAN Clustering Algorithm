@@ -1,0 +1,124 @@
+import numpy as np
+from sklearn.cluster import DBSCAN
+import matplotlib.pyplot as plt
+
+# Dataset: Points
+points = np.array([(1, 2), (1.5, 1.8), (5, 8), (8, 8), (1, 0.6), (9, 11)])
+
+# DBSCAN parameters
+epsilon = 2.0
+min_samples = 2
+
+# Initialize and fit DBSCAN
+dbscan = DBSCAN(eps=epsilon, min_samples=min_samples)
+dbscan.fit(points)
+
+# Get the cluster labels
+labels = dbscan.labels_
+
+# Print the points with their respective cluster labels
+for point, label in zip(points, labels):
+    print(f"Point {point} is in cluster {label}")
+
+# Plotting the points and clusters
+unique_labels = set(labels)
+colors = [plt.cm.Spectral(each) for each in np.linspace(0, 1, len(unique_labels))]
+
+for k, col in zip(unique_labels, colors):
+    if k == -1:
+        # Black used for noise.
+        col = [0, 0, 0, 1]
+
+    class_member_mask = (labels == k)
+
+    xy = points[class_member_mask]
+    plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col),
+             markeredgecolor='k', markersize=14)
+
+plt.title('DBSCAN Clustering')
+plt.show()
+
+Code Explanation:
+
+import numpy as np
+from sklearn.cluster import DBSCAN
+import matplotlib.pyplot as plt
+
+Imports necessary libraries
+
+        `numpy` for numerical operations and handling arrays.
+
+        `DBSCAN` from `sklearn` for the clustering algorithm.
+
+        `matplotlib.pyplot` for plotting the results.
+
+        # Dataset: Points
+         points = np.array([(1, 2), (1.5, 1.8), (5, 8), (8, 8), (1, 0.6), (9, 11)])
+
+Defines the dataset as a numpy array of 2D points.
+
+# DBSCAN parameters
+epsilon = 2.0
+min_samples = 2
+
+Sets the parameters for the DBSCAN algorithm:
+
+    `epsilon`: The maximum distance between two samples for them to be considered as in the same neighborhood.
+
+    `min_samples`: The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.
+
+# Initialize and fit DBSCAN
+    dbscan = DBSCAN(eps=epsilon, min_samples=min_samples)
+    dbscan.fit(points)
+
+       Initializes and fits the DBSCAN model to the dataset with the specified parameters.
+
+# Get the cluster labels
+labels = dbscan.labels_
+
+       Retrieves the cluster labels assigned to each point by the DBSCAN algorithm. `-1` indicates a noise point.
+
+# Print the points with their respective cluster labels
+for point, label in zip(points, labels):
+    print(f"Point {point} is in cluster {label}")
+
+       Prints each point along with its assigned cluster label.
+
+# Plotting the points and clusters
+unique_labels = set(labels)
+colors = [plt.cm.Spectral(each) for each in np.linspace(0, 1, len(unique_labels))]
+
+Prepares for plotting:
+
+        `unique_labels`: The set of unique cluster labels.
+
+         `colors`: A list of colors to use for each cluster, generated using a colormap.
+
+for k, col in zip(unique_labels, colors):
+    if k == -1:
+        # Black used for noise.
+        col = [0, 0, 0, 1]
+
+    class_member_mask = (labels == k)
+
+    xy = points[class_member_mask]
+    plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col),
+             markeredgecolor='k', markersize=14)
+
+Plots the points:
+
+        Iterates over each unique label and its corresponding color.
+
+        If the label is -1, it sets the color to black (indicating noise points).
+
+        Masks the points that belong to the current cluster and plots them.
+
+plt.title('DBSCAN Clustering')
+plt.show()
+
+        Sets the title of the plot and displays it.
+
+Summary:
+
+This code demonstrates how to perform clustering using the DBSCAN algorithm on a dataset of points. It prints the cluster labels for each point and visualizes the clustering results using a scatter plot, where 
+different colors represent different clusters, and black points represent noise.
