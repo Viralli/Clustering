@@ -36,21 +36,21 @@
 
   # Outputs
 
-  1. Basic DBSCAN Clustering (DBSCAN clustering for first set of points(Part -1)):
+  1. DBSCAN Clustering Algorithm Part -1:
 
-        ![dbscan_eps_min_sample_data_1 py - Part 1](https://github.com/Viralli/Clustering/assets/92823324/4b378bcf-eb5b-4369-a710-3b513e226578)
+        ![DBSCAN Algorithm - Part 1](https://github.com/user-attachments/assets/a52ac82e-6295-4251-954d-4d1539da2623)
 
-  2. Basic DBSCAN Clustering (DBSCAN clustering for first set of points(Part -2)):
+  2. DBSCAN Clustering Algorithm Part -2:
 
-        ![dbscan_eps_min_sample_data_1 py - Part 2](https://github.com/Viralli/Clustering/assets/92823324/08a54178-3c6a-4013-8a5c-dc7d1f721d1a)
+        ![DBSCAN Algorithm - Part 2](https://github.com/user-attachments/assets/aa49607d-d90b-437c-91ef-97dabb0e299e)
 
-  3. Modified DBSCAN Clustering (DBSCAN clustering for Second set of points(Part -1)):
+  3. DBSCAN Clustering Algorithm Part -3:
 
-        ![dbscan_eps_min_sample_data_2 py - Part 1](https://github.com/Viralli/Clustering/assets/92823324/84140b5c-e120-4909-b3d6-710a9884ff58)
+        ![DBSCAN Algorithm - Part 3](https://github.com/user-attachments/assets/f2ed8713-491f-4b72-8b4b-efc9e29a4387)
 
-  4. Modified DBSCAN Clustering (DBSCAN clustering for Second set of points(Part -2)):
+  4. DBSCAN Clustering Algorithm Part -4:
 
-        ![dbscan_eps_min_sample_data_2 py - Part 2](https://github.com/Viralli/Clustering/assets/92823324/00681472-8545-4df3-a95e-62eff0be282a)
+        ![DBSCAN Algorithm Part -4](https://github.com/user-attachments/assets/44a9eeb5-5f8d-4497-b5a7-37dd21ee1ddb)
 
   5. K Means Clustering(Part -1):
 
@@ -68,7 +68,7 @@
 
         ![K Means Clustering Algorithm - Part 2](https://github.com/user-attachments/assets/29285321-31ab-4059-b4f1-33eccd9ae94d)
 
-  9.   K Means Clustering Algorithm Part -3
+  9.  K Means Clustering Algorithm Part -3
 
         ![K Means Clustering Algorithm - Part 3](https://github.com/user-attachments/assets/c987e3b9-c032-400c-8a3d-04c0a21a0cf7)
 
