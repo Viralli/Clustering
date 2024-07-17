@@ -52,31 +52,39 @@
 
         ![DBSCAN Algorithm Part -4](https://github.com/user-attachments/assets/3c012f09-f100-4810-a6cc-cb95160d48ce)
 
-  5. K Means Clustering(Part -1):
+  5. DBSCAN Clustering Algorithm: Code Explanation(Graphical Representation) Part -1:
+
+     ![DBSCAN Algorithm Graphical Representation Part -1](https://github.com/user-attachments/assets/c44d95eb-129f-418e-9c3e-8aa5897dd0ba)
+
+  6. DBSCAN Clustering Algorithm: Code Explanation(Graphical Representation) Part -2:
+
+     ![DBSCAN Algorithm Graphical Representation Part -1](https://github.com/user-attachments/assets/b13b434f-214c-44e7-bdd8-f80289863795)
+
+  7. K Means Clustering(Part -1):
 
         ![K Means Clustering - Output Part 1](https://github.com/Viralli/Clustering/assets/92823324/22b61e69-419b-4cb8-9703-fde0c366d279)
 
-  6. K Means Clustering(Part -2):
+  8. K Means Clustering(Part -2):
     
         ![K Means Clustering - Output Part 2](https://github.com/Viralli/Clustering/assets/92823324/2086356e-1b57-4d5c-b084-54a1eabed024)
 
-  7. K Means Clustering Algorithm Part -1
+  9. K Means Clustering Algorithm Part -1
 
         ![K Means Clustering Algorithm - Part 1](https://github.com/user-attachments/assets/e762ab67-a7f3-479f-9324-3ca09d50b955)
         
-  8.  K Means Clustering Algorithm Part -2
+  10.  K Means Clustering Algorithm Part -2
 
         ![K Means Clustering Algorithm - Part 2](https://github.com/user-attachments/assets/29285321-31ab-4059-b4f1-33eccd9ae94d)
 
-  9.  K Means Clustering Algorithm Part -3
+  11.  K Means Clustering Algorithm Part -3
 
         ![K Means Clustering Algorithm - Part 3](https://github.com/user-attachments/assets/c987e3b9-c032-400c-8a3d-04c0a21a0cf7)
 
-  10. K Means Clustering with Polygon Area Calculation - Part 1:
+  12. K Means Clustering with Polygon Area Calculation - Part 1:
 
       ![K Means Clustering with Polygon Area Calculation - Part 1](https://github.com/user-attachments/assets/c36e3b78-1925-4349-aab5-e2cc38d08f33)
 
- 11. K Means Clustering with Polygon Area Calculation - Part 2:
+ 13. K Means Clustering with Polygon Area Calculation - Part 2:
 
       ![K Means Clustering with Polygon Area Calculation - Part 2](https://github.com/user-attachments/assets/d251a3c8-4e54-4652-9de7-9f53bd608f4b)
 
