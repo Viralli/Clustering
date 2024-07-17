@@ -1,0 +1,136 @@
+Code:
+
+import numpy as np
+from sklearn.cluster import DBSCAN
+
+# Sample data points
+X = np.array([[1, 2], [1, 1], [1.5, 1.8], [0, 1], [1, 0.6], [5, 8], [8, 8], [9, 11]])
+
+# DBSCAN parameters
+eps = 2.0
+min_pts = 2
+
+# Perform DBSCAN clustering
+dbscan = DBSCAN(eps=eps, min_samples=min_pts)
+labels = dbscan.fit_predict(X)
+
+# Retrieve core samples and labels
+core_samples_mask = np.zeros_like(dbscan.labels_, dtype=bool)
+core_samples_mask[dbscan.core_sample_indices_] = True
+
+# Print DBSCAN parameters and explanations
+print("DBSCAN Parameters and Explanations:")
+print(f"eps: {eps} (maximum radius of the neighborhood)")
+print(f"min_pts: {min_pts} (minimum number of points to form a cluster)\n")
+
+# Print DBSCAN clustering results
+print("DBSCAN Clustering Results:")
+for i in range(len(X)):
+    if core_samples_mask[i]:
+        print(f"Choosing Core Point: {X[i]}")
+        neighbors = np.where(dbscan.components_ == i)[0]
+        print(f"Finding Eps-Neighborhood: {list(neighbors)}")
+        print(f"Core Point Check: Point {X[i]} is chosen as a core point with neighbors {list(neighbors)}.")
+
+        # Handling noise
+        if labels[i] == -1:
+            print("Handling Noise: This core point has been marked as noise.")
+        else:
+            print(f"Expand the Cluster: Expanding cluster around point {X[i]} with neighbors {list(neighbors)}.")
+            print(f"Assign Border Points: Assigning border points to cluster {labels[i]}.\n")
+
+# Print noise points
+print("Noise Points:")
+for i in range(len(X)):
+    if labels[i] == -1:
+        print(f"Noise Identification: Point {X[i]}.")
+
+# Print final clusters
+print("\nFinal Clusters:")
+unique_labels = set(labels)
+for label in unique_labels:
+    if label != -1:
+        print(f"\nCluster {label}: Points {list(X[labels == label])}")
+
+Code Explanation:
+
+DBSCAN Clustering with Explanation
+
+        This Python script demonstrates the application of DBSCAN (Density-Based Spatial Clustering of Applications with Noise) using sample data points. DBSCAN is a clustering algorithm that groups points based on 
+        their density within a specified radius (`eps`) and minimum number of points `(min_pts`) required to form a cluster.
+
+Code Explanation:
+
+1. Importing Libraries and Data Setup:
+
+import numpy as np
+from sklearn.cluster import DBSCAN
+
+# Sample data points
+X = np.array([[1, 2], [1, 1], [1.5, 1.8], [0, 1], [1, 0.6], [5, 8], [8, 8], [9, 11]])
+
+        Here, `numpy` is imported for numerical operations, and `DBSCAN` is imported from `sklearn.cluster` for clustering operations. The `X` array represents the sample data points in a 2-dimensional space.
+
+2. DBSCAN Parameters:
+
+eps = 2.0  # Maximum radius of the neighborhood
+min_pts = 2  # Minimum number of points to form a cluster
+
+        Parameters `eps` and `min_pts` are set to `2.0` and `2`, respectively. `eps` defines the maximum distance between two points for them to be considered neighbors, and `min_pts` specifies the minimum number of points 
+        required to form a dense region (cluster).
+
+3. Performing DBSCAN Clustering:
+
+dbscan = DBSCAN(eps=eps, min_samples=min_pts)
+labels = dbscan.fit_predict(X)
+
+       The `DBSCAN` object is created  with the specified `eps` and `min_samples` parameters. `fit_predict(X)` computes DBSCAN clustering and assigns cluster labels to each point in `X`.
+
+4. Core Samples and Labels:
+
+core_samples_mask = np.zeros_like(dbscan.labels_, dtype=bool)
+core_samples_mask[dbscan.core_sample_indices_] = True
+
+    `core_samples_mask` identifies core points, which are points that have at least `min_pts` within their `eps` neighborhood.
+
+5. Printing DBSCAN Parameters and Explanations:
+
+print("DBSCAN Parameters and Explanations:")
+print(f"eps: {eps} (maximum radius of the neighborhood)")
+print(f"min_pts: {min_pts} (minimum number of points to form a cluster)\n")
+
+    This section prints out the parameters `eps` and `min_pts` used for DBSCAN clustering, providing an overview of the clustering criteria.
+
+6. Printing DBSCAN Clustering Results:
+
+print("DBSCAN Clustering Results:")
+for i in range(len(X)):
+    if core_samples_mask[i]:
+        print(f"Choosing Core Point: {X[i]}")
+        neighbors = np.where(dbscan.components_ == i)[0]
+        print(f"Finding Eps-Neighborhood: {list(neighbors)}")
+        print(f"Core Point Check: Point {X[i]} is chosen as a core point with neighbors {list(neighbors)}.")
+
+        # Handling noise
+        if labels[i] == -1:
+            print("Handling Noise: This core point has been marked as noise.")
+        else:
+            print(f"Expand the Cluster: Expanding cluster around point {X[i]} with neighbors {list(neighbors)}.")
+            print(f"Assign Border Points: Assigning border points to cluster {labels[i]}.\n")
+
+This section iterates through each data point to report which points are core points, their neighbors within `eps`, and how clusters expand or handle noise points based on DBSCAN's output labels.
+
+7. Printing Noise Points and Final Clusters:
+
+print("Noise Points:")
+for i in range(len(X)):
+    if labels[i] == -1:
+        print(f"Noise Identification: Point {X[i]}.")
+
+print("\nFinal Clusters:")
+unique_labels = set(labels)
+for label in unique_labels:
+    if label != -1:
+        print(f"\nCluster {label}: Points {list(X[labels == label])}")
+
+Finally, this part prints identified noise points and summarizes the final clusters formed by DBSCAN, excluding noise points.
