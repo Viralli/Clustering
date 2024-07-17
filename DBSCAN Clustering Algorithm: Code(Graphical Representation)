@@ -1,0 +1,53 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import DBSCAN
+
+# Sample data points
+X = np.array([[1, 2], [1, 1], [1.5, 1.8], [0, 1], [1, 0.6], [5, 8], [8, 8], [9, 11]])
+
+# DBSCAN parameters
+eps = 2.0
+min_pts = 2
+
+# Perform DBSCAN clustering
+dbscan = DBSCAN(eps=eps, min_samples=min_pts)
+labels = dbscan.fit_predict(X)
+
+# Retrieve core samples and labels
+core_samples_mask = np.zeros_like(dbscan.labels_, dtype=bool)
+core_samples_mask[dbscan.core_sample_indices_] = True
+
+# Plotting the DBSCAN clustering process
+plt.figure(figsize=(12, 8))
+
+# Plot all points
+plt.scatter(X[:, 0], X[:, 1], c='black', marker='o', s=100, label='Data Points')
+
+# Highlight core points
+plt.scatter(X[core_samples_mask][:, 0], X[core_samples_mask][:, 1], c='red', marker='o', s=300, edgecolors='k', linewidths=2, label='Core Points')
+
+# Plot cluster assignments
+for i in range(len(X)):
+    if core_samples_mask[i]:
+        plt.text(X[i][0], X[i][1], str(labels[i]), fontsize=12, ha='center', va='center')
+
+# Plot noise points
+noise_mask = labels == -1
+plt.scatter(X[noise_mask][:, 0], X[noise_mask][:, 1], c='yellow', marker='x', s=200, label='Noise Points')
+
+# Plot final clusters
+unique_labels = set(labels)
+for label in unique_labels:
+    if label != -1:
+        cluster_mask = labels == label
+        plt.scatter(X[cluster_mask][:, 0], X[cluster_mask][:, 1], marker='o', s=150, label=f'Cluster {label}')
+
+plt.title('DBSCAN Clustering Results', fontsize=16)
+plt.xlabel('X Coordinate', fontsize=14)
+plt.ylabel('Y Coordinate', fontsize=14)
+plt.legend(loc='upper right', fontsize=12)
+plt.grid(True)
+plt.tight_layout()
+
+# Display the plot
+plt.show()
