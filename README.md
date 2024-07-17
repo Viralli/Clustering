@@ -58,7 +58,7 @@
 
   6. DBSCAN Clustering Algorithm: Code Explanation(Graphical Representation) Part -2:
 
-     ![DBSCAN Algorithm Graphical Representation Part -1](https://github.com/user-attachments/assets/b13b434f-214c-44e7-bdd8-f80289863795)
+     ![DBSCAN Algorithm Graphical Representation  2](https://github.com/user-attachments/assets/5a1f2326-9169-41b5-930c-01cbda9a28ec)
 
   7. K Means Clustering(Part -1):
 
