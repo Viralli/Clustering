@@ -1,0 +1,38 @@
+Output:
+
+    Please refer to README.md section to see the output for DBSCAN Clustering Algorithm(Graphical Representation)
+
+Output Explanation:
+
+The provided code (for the DBSCAN (Density-Based Spatial Clustering of Applications with Noise) Algorithm) uses the DBSCAN (Density-Based Spatial Clustering of Applications with Noise) algorithm to cluster a set of 
+2D data points and visualize the results. Here is a brief explanation of the output:
+
+1. Data Points:
+
+    The scatter plot displays all the data points in black.
+
+2. Core Points:
+
+    Core points are highlighted in red and are larger in size.
+
+    These points have at least `min_pts` (2) neighboring points within the `eps` (2.0) radius.
+
+3. Cluster Labels:
+
+    Each core point is labeled with its respective cluster number.
+
+    Points belonging to the same cluster share the same number and are grouped together.
+
+4. Noise Points:
+
+    Noise points are marked with yellow crosses.
+
+    These points do not belong to any cluster as they do not have enough neighboring points.
+
+5. Cluster Representation:
+
+    Points belonging to the same cluster are represented with the same color.
+
+    The plot visually differentiates between different clusters, core points, and noise points.
+
+The final plot effectively shows the clustering results, highlighting core points, clusters, and noise points, providing a clear understanding of how DBSCAN has partitioned the dataset.
