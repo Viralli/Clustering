@@ -38,19 +38,19 @@
 
   1. DBSCAN Clustering Algorithm Part -1:
 
-       ![part-1](https://github.com/user-attachments/assets/770d3641-248e-4889-a2e8-075daeafa306)
+       ![DBSCAN Implementation Output- Part 1](https://github.com/user-attachments/assets/b8156430-1330-47b8-9a2a-5b268627c4ec)
     
   2. DBSCAN Clustering Algorithm Part -2:
 
-        ![part 2](https://github.com/user-attachments/assets/e0698c23-d375-4cae-b92f-972bbddec1a6)
+       ![DBSCAN Implementation Output- Part 2](https://github.com/user-attachments/assets/b42a010f-b31c-49dd-931d-79d919809bcc)
 
   3. DBSCAN Clustering Algorithm Part -3:
 
-        ![part-3](https://github.com/user-attachments/assets/e7583050-3765-491f-a974-a13c910e3f98)
+        ![DBSCAN Implementation Output- Part 3](https://github.com/user-attachments/assets/57bb1c45-eafe-41d5-a6ce-b630141d4f1a)
 
   4. DBSCAN Clustering Algorithm Part -4:
 
-        ![part-4](https://github.com/user-attachments/assets/b03a4f9b-586d-444d-943a-85bb97c4d01e)
+        ![DBSCAN Implementation Output- Part 4](https://github.com/user-attachments/assets/74568267-1776-4f2d-ab7a-32f5ea70ba2d)
 
   5. K Means Clustering(Part -1):
 
