@@ -88,6 +88,30 @@
 
       ![K Means Clustering with Polygon Area Calculation - Part 2](https://github.com/user-attachments/assets/d251a3c8-4e54-4652-9de7-9f53bd608f4b)
 
+14.  Clustering Part -1:
+
+      ![Clustering - Output - Part 1](https://github.com/user-attachments/assets/6ce0e1d8-2df9-42c3-ad01-2b923f60bcd6)
+
+15.  Clustering Part -2:
+
+      ![Clustering - Output - Part 2](https://github.com/user-attachments/assets/cddf5024-3299-4a87-a531-6f3a7dcf8f6f)
+
+16.  Clustering Part -3:
+
+      ![Clustering - Output - Part 3](https://github.com/user-attachments/assets/02f3557e-fe2b-4148-8c74-3b6935a20886)
+
+17.  Clustering Part -4:
+
+      ![Clustering - Output - Part 4](https://github.com/user-attachments/assets/98b1649b-23cc-4cff-912a-56ea48f63cb7)
+
+18. Clustering Part -5:
+
+    ![Clustering - Output - Part 5](https://github.com/user-attachments/assets/d0aa9a37-2c06-4ad0-9ae3-50ffd9f15d08)
+
+
+
+
+
   # Conclusion
 
   This project provides an overview of different clustering techniques and demonstrates their implementation using Python. By visualizing clusters and their boundaries, it becomes easier to understand the structure and patterns within the data.   
