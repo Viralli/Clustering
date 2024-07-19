@@ -90,27 +90,27 @@
 
 14.  Clustering Part -1:
 
-      ![Clustering - Output - Part 1](https://github.com/user-attachments/assets/6ce0e1d8-2df9-42c3-ad01-2b923f60bcd6)
+     ![Clustering - Output - Part 1](https://github.com/user-attachments/assets/82ab0be1-2587-4739-9640-547ac63f1d47)
 
 15.  Clustering Part -2:
 
-      ![Clustering - Output - Part 2](https://github.com/user-attachments/assets/cddf5024-3299-4a87-a531-6f3a7dcf8f6f)
+     ![Clustering - Output - Part 2](https://github.com/user-attachments/assets/2644de14-6ee1-4228-a5ca-9fb9827d379e)
 
 16.  Clustering Part -3:
 
-      ![Clustering - Output - Part 3](https://github.com/user-attachments/assets/02f3557e-fe2b-4148-8c74-3b6935a20886)
+      ![Clustering - Output - Part 3](https://github.com/user-attachments/assets/1ccff1a0-cea9-47c4-bfc4-fbb582e828fe)
 
 17.  Clustering Part -4:
 
-      ![Clustering - Output - Part 4](https://github.com/user-attachments/assets/98b1649b-23cc-4cff-912a-56ea48f63cb7)
+     ![Clustering - Output - Part 4](https://github.com/user-attachments/assets/7288cc3a-7f71-4616-8a11-b33b32ac60d9)
 
 18. Clustering Part -5:
 
-    ![Clustering - Output - Part 5](https://github.com/user-attachments/assets/d0aa9a37-2c06-4ad0-9ae3-50ffd9f15d08)
+   ![Clustering - Output - Part 5](https://github.com/user-attachments/assets/defec502-16a8-4295-bacc-6020849dc3a1)
 
+19. Clustering Part -6:
 
-
-
+   ![Clustering - Output - Part 6](https://github.com/user-attachments/assets/aef9d8ac-c0f3-400c-8cce-d8ba28ae825f)
 
   # Conclusion
 
