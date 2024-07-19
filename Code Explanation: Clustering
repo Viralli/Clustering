@@ -1,0 +1,161 @@
+Code:
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.cluster import KMeans, AgglomerativeClustering
+from sklearn.mixture import GaussianMixture
+
+# Generate synthetic dataset with clear cluster structure
+X, y_true = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)
+print("Dataset with clear cluster structure generated.")
+
+# Function to plot clusters
+def plot_clusters(X, y_pred, title):
+    plt.figure(figsize=(8, 6))
+    plt.scatter(X[:, 0], X[:, 1], c=y_pred, s=50, cmap='viridis')
+    plt.title(title)
+    plt.xlabel('Feature 1')
+    plt.ylabel('Feature 2')
+    plt.grid(True)
+    plt.show()
+
+# Flat Algorithm: KMeans (Hard Clustering)
+print("Applying Flat Algorithm: KMeans (Hard Clustering)")
+kmeans = KMeans(n_clusters=4, random_state=0)
+y_kmeans = kmeans.fit_predict(X)
+plot_clusters(X, y_kmeans, "KMeans Clustering (Hard Clustering)")
+
+# Hierarchical Algorithm: Agglomerative Clustering (Hard Clustering)
+print("Applying Hierarchical Algorithm: Agglomerative Clustering (Hard Clustering)")
+agg_clustering = AgglomerativeClustering(n_clusters=4)
+y_agg = agg_clustering.fit_predict(X)
+plot_clusters(X, y_agg, "Agglomerative Clustering (Hard Clustering)")
+
+# Soft Clustering: Gaussian Mixture Model (GMM)
+print("Applying Soft Clustering: Gaussian Mixture Model (GMM)")
+gmm = GaussianMixture(n_components=4, random_state=0)
+y_gmm = gmm.fit_predict(X)
+plot_clusters(X, y_gmm, "Gaussian Mixture Model (Soft Clustering)")
+
+# GMM also provides the probability of each sample belonging to each cluster
+y_gmm_proba = gmm.predict_proba(X)
+print("Sample cluster probabilities (first 5 samples):")
+for i, probs in enumerate(y_gmm_proba[:5]):
+    print(f"Sample {i+1}: {probs}")
+
+# Summary
+print("\nSummary:")
+print("Dataset with clear cluster structure generated.")
+print("\nApplying Flat Algorithm: KMeans (Hard Clustering)")
+print("KMeans Cluster Labels (first 10 samples):", y_kmeans[:10])
+print("\nApplying Hierarchical Algorithm: Agglomerative Clustering (Hard Clustering)")
+print("Agglomerative Clustering Labels (first 10 samples):", y_agg[:10])
+print("\nApplying Soft Clustering: Gaussian Mixture Model (GMM)")
+print("GMM Cluster Labels (first 10 samples):", y_gmm[:10])
+print("\nSample cluster probabilities (first 5 samples):")
+for i, probs in enumerate(y_gmm_proba[:5]):
+    print(f"Sample {i+1}: {probs}")
+
+Code Explanation:
+
+Clustering Algorithms with Synthetic Data
+
+    This code demonstrates the application of three clustering algorithms—KMeans, Agglomerative Clustering, and Gaussian Mixture Model (GMM)—on a synthetic dataset with a clear cluster structure. The code also visualizes 
+    the clusters and provides probabilities for cluster membership in the case of GMM. Below is a detailed explanation of each section of the code.
+
+Importing Libraries
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.cluster import KMeans, AgglomerativeClustering
+from sklearn.mixture import GaussianMixture
+
+    We start by importing the necessary libraries. `numpy` is used for numerical operations, `matplotlib.pyplot` is used for plotting, and `sklearn` provides tools for generating data and implementing clustering 
+    algorithms.
+
+Generating Synthetic Data
+
+# Generate synthetic dataset with clear cluster structure
+X, y_true = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)
+print("Dataset with clear cluster structure generated.")
+
+    We generate a synthetic dataset using `make_blobs`. This dataset consists of 300 samples, with 4 centers (clusters), and a standard deviation of 0.60. The `random_state` parameter ensures reproducibility of the 
+    results. The dataset `X`contains the feature values, while `y_true` contains the true cluster labels.
+
+Function to Plot Clusters
+
+# Function to plot clusters
+def plot_clusters(X, y_pred, title):
+    plt.figure(figsize=(8, 6))
+    plt.scatter(X[:, 0], X[:, 1], c=y_pred, s=50, cmap='viridis')
+    plt.title(title)
+    plt.xlabel('Feature 1')
+    plt.ylabel('Feature 2')
+    plt.grid(True)
+    plt.show()
+
+    This function takes the dataset `X`, predicted cluster labels `y_pred`, and a `title` as inputs. It creates a scatter plot of the data points, coloring them according to the predicted clusters. 
+    The plot is displayed with appropriate labels and a grid for better readability.
+
+Applying KMeans (Flat Algorithm, Hard Clustering)
+
+# Flat Algorithm: KMeans (Hard Clustering)
+print("Applying Flat Algorithm: KMeans (Hard Clustering)")
+kmeans = KMeans(n_clusters=4, random_state=0)
+y_kmeans = kmeans.fit_predict(X)
+plot_clusters(X, y_kmeans, "KMeans Clustering (Hard Clustering)")
+
+    KMeans is a popular flat clustering algorithm that partitions the data into a specified number of clusters (4 in this case). The `fit_predict` method computes cluster centers and predicts the cluster for each sample. 
+    The results are plotted using the `plot_clusters` function.
+
+Applying Agglomerative Clustering (Hierarchical Algorithm, Hard Clustering)
+
+# Hierarchical Algorithm: Agglomerative Clustering (Hard Clustering)
+print("Applying Hierarchical Algorithm: Agglomerative Clustering (Hard Clustering)")
+agg_clustering = AgglomerativeClustering(n_clusters=4)
+y_agg = agg_clustering.fit_predict(X)
+plot_clusters(X, y_agg, "Agglomerative Clustering (Hard Clustering)")
+
+    Agglomerative Clustering is a hierarchical clustering algorithm that builds nested clusters by merging or splitting them successively. Here, we apply the algorithm to partition the data into 4 clusters and 
+    plot the results.
+
+Applying Gaussian Mixture Model (Soft Clustering)
+
+# Soft Clustering: Gaussian Mixture Model (GMM)
+print("Applying Soft Clustering: Gaussian Mixture Model (GMM)")
+gmm = GaussianMixture(n_components=4, random_state=0)
+y_gmm = gmm.fit_predict(X)
+plot_clusters(X, y_gmm, "Gaussian Mixture Model (Soft Clustering)")
+
+    GMM is a probabilistic model that assumes the data is generated from a mixture of several Gaussian distributions. Unlike hard clustering, GMM provides probabilities of each sample belonging to each cluster. 
+    The `fit_predict` method assigns each sample to the cluster with the highest probability.
+
+Displaying Cluster Probabilities
+
+# GMM also provides the probability of each sample belonging to each cluster
+y_gmm_proba = gmm.predict_proba(X)
+print("Sample cluster probabilities (first 5 samples):")
+for i, probs in enumerate(y_gmm_proba[:5]):
+    print(f"Sample {i+1}: {probs}")
+
+    For GMM, we also display the cluster probabilities for the first 5 samples. The `predict_proba` method returns these probabilities, which are printed in a readable format.
+
+Summary:
+
+    # Summary
+print("\nSummary:")
+print("Dataset with clear cluster structure generated.")
+print("\nApplying Flat Algorithm: KMeans (Hard Clustering)")
+print("KMeans Cluster Labels (first 10 samples):", y_kmeans[:10])
+print("\nApplying Hierarchical Algorithm: Agglomerative Clustering (Hard Clustering)")
+print("Agglomerative Clustering Labels (first 10 samples):", y_agg[:10])
+print("\nApplying Soft Clustering: Gaussian Mixture Model (GMM)")
+print("GMM Cluster Labels (first 10 samples):", y_gmm[:10])
+print("\nSample cluster probabilities (first 5 samples):")
+for i, probs in enumerate(y_gmm_proba[:5]):
+    print(f"Sample {i+1}: {probs}")
+
+     Finally, we summarize the results by printing the cluster labels for the first 10 samples for each algorithm and the cluster probabilities for the first 5 samples for GMM.
